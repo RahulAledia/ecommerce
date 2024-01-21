@@ -20,7 +20,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "_user")
+@Table(name = "user")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +29,6 @@ public class User implements UserDetails {
     private String lastName;
     private String email;
     private String password;
-    private String shippingAddress;
-    private String billingAddress;
 
     @Enumerated(EnumType.STRING)
     private Role role;
